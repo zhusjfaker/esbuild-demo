@@ -30,14 +30,21 @@ export function getbaseConfig(key, _env) {
             },
           },
           {
-            test: /\.(js|mjs|jsx|ts|tsx)$/,
+            test: /\.ts$/,
+            loader: 'esbuild-loader',
+            options: {
+              target: 'es2015', // default, or 'es20XX', 'esnext'
+              sourcemap: true, 
+            },
+          },
+          {
+            test: /\.tsx$/,
             loader: 'esbuild-loader',
             options: {
               // All options are optional
-              target: 'es2015', // default, or 'es20XX', 'esnext'
-              jsxFactory: 'React.createElement',
-              jsxFragment: 'React.Fragment',
-              sourcemap: true, // Enable sourcemap
+              loader: 'tsx',
+              target: 'es2015',
+              sourcemap: true, 
             },
           },
           // {

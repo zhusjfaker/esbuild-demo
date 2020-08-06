@@ -11,11 +11,11 @@ import paths from './paths';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import ModuleNotFoundPlugin from 'react-dev-utils/ModuleNotFoundPlugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import safePostCssParser from 'postcss-safe-parser';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { ESBuildPlugin, ESBuildMinifyPlugin } from 'esbuild-loader';
-import EsHtmlPlguin from './custom-plugin/es-html-plugin';
+import { ESBuildPlugin } from 'esbuild-loader';
+// import EsHtmlPlguin from './custom-plugin/es-html-plugin';
 // import { getDevServerConfig } from './webpackDevServer.config';
 
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -48,7 +48,6 @@ const optimization: any = {
 };
 if (!isDev) {
   optimization.minimizer = [
-    new ESBuildMinifyPlugin(),
     new TerserPlugin({
       terserOptions: {
         parse: {
@@ -121,11 +120,11 @@ function setClientBuildConfigTask(originkey, rootpath, _entry) {
       fileName: `${key}/app-client.json`,
       publicPath: publicPath,
     }),
-    new EsHtmlPlguin(),
-    // new HtmlWebpackPlugin({
-    //   template: paths.template,
-    //   filename: `${key}/index.html`,
-    // }),
+    // new EsHtmlPlguin(),
+    new HtmlWebpackPlugin({
+      template: paths.template,
+      filename: `${key}/index.html`,
+    }),
   ];
 
   const baseConfig = getbaseConfig(key, 'client');

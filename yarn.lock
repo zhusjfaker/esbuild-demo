@@ -3572,23 +3572,24 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild-loader@^1.3.1:
-  version "1.3.1"
-  resolved "http://bnpm.byted.org/esbuild-loader/download/esbuild-loader-1.3.1.tgz#9f5ee58a4c1fe4b18cfa6297ad304f23af54cee4"
-  integrity sha1-n17likwf5LGM+mKXrTBPI69UzuQ=
+esbuild-loader@^2.0.1:
+  version "2.0.1"
+  resolved "http://bnpm.byted.org/esbuild-loader/download/esbuild-loader-2.0.1.tgz#31aedb04c86baba17d523e6d8815adcfeaff3a21"
+  integrity sha1-Ma7bBMhrq6F9Uj5tiBWtz+r/OiE=
   dependencies:
     esbuild "^0.5.16"
     loader-utils "^2.0.0"
+    webpack-sources "^1.4.3"
 
 esbuild@^0.5.16:
   version "0.5.26"
   resolved "http://bnpm.byted.org/esbuild/download/esbuild-0.5.26.tgz#0868e8f3e0938c6cb9a8c93e74f85900eff1a071"
   integrity sha1-CGjo8+CTjGy5qMk+dPhZAO/xoHE=
 
-esbuild@^0.6.5:
-  version "0.6.5"
-  resolved "http://bnpm.byted.org/esbuild/download/esbuild-0.6.5.tgz#efbe11cf51abd0d4d489ca1bc80fd4761a35bd16"
-  integrity sha1-774Rz1Gr0NTUicobyA/Udho1vRY=
+esbuild@^0.6.17:
+  version "0.6.17"
+  resolved "http://bnpm.byted.org/esbuild/download/esbuild-0.6.17.tgz#64f428fe001600f7de9b4a28b0d0905c1078bc50"
+  integrity sha1-ZPQo/gAWAPfem0oosNCQXBB4vFA=
 
 escalade@^3.0.1:
   version "3.0.2"
@@ -9706,7 +9707,7 @@ webpack-node-externals@1.7.2:
   resolved "http://bnpm.byted.org/webpack-node-externals/download/webpack-node-externals-1.7.2.tgz#6e1ee79ac67c070402ba700ef033a9b8d52ac4e3"
   integrity sha1-bh7nmsZ8BwQCunAO8DOpuNUqxOM=
 
-webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0:
+webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0, webpack-sources@^1.4.3:
   version "1.4.3"
   resolved "http://bnpm.byted.org/webpack-sources/download/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
   integrity sha1-7t2OwLko+/HL/plOItLYkPMwqTM=
