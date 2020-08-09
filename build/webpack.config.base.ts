@@ -33,8 +33,9 @@ export function getbaseConfig(key, _env) {
             test: /\.ts$/,
             loader: 'esbuild-loader',
             options: {
-              target: 'es2015', // default, or 'es20XX', 'esnext'
-              sourcemap: true, 
+              target: 'es2020', // default, or 'es20XX', 'esnext'
+              sourcemap: true,
+              loader: 'ts', 
             },
           },
           {
@@ -43,7 +44,7 @@ export function getbaseConfig(key, _env) {
             options: {
               // All options are optional
               loader: 'tsx',
-              target: 'es2015',
+              target: 'es2018',
               sourcemap: true, 
             },
           },
