@@ -1,4 +1,4 @@
-import { startService } from "esbuild";
+import { startService } from 'esbuild';
 
 (async () => {
   const service = await startService();
@@ -7,18 +7,20 @@ import { startService } from "esbuild";
     // Call transform() many times without the overhead of starting a service
     const [a, b] = await Promise.all([
       service.build({
-        entryPoints: ["src/index.ts"],
-        outfile: "dist/index.js",
-        minify: true,
+        entryPoints: ['src/index.ts'],
+        outfile: 'dist/index.js',
         bundle: true,
+        platform: 'node',
+        target: 'node12',
         sourcemap: true,
       }),
       service.build({
-        entryPoints: ["src/page.tsx"],
-        outfile: "dist/page.js",
+        entryPoints: ['src/page.tsx'],
+        outfile: 'dist/page.js',
         bundle: true,
-        platform: "browser",
-        define: { "process.env.NODE_ENV": "'development'" },
+        platform: 'node',
+        target: 'node12',
+        define: { 'process.env.NODE_ENV': "'development'" },
       }),
     ]);
     console.log([a, b]);

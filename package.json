@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./dist && ts-node-dev ./build/test.ts",
+    "build": "rm -rf ./dist && ts-node-dev ./build/mution.ts",
     "csr": "NODE_ENV=development ts-node-dev --inspect=19230 ./build/express.ts"
   },
   "author": "",

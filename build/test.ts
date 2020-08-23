@@ -1,4 +1,6 @@
 import { startService } from 'esbuild';
+// import fs from 'fs';
+// import path from 'path';
 
 (async () => {
   const service = await startService();
@@ -15,11 +17,14 @@ import { startService } from 'esbuild';
         export { Test };
         `,
         {
-          target: 'es2020',
-          loader: 'tsx',
+          target: 'node4',
+          loader: 'ts',
         },
       ),
     ]);
+    // fs.writeFileSync(path.resolve(__dirname, '../test.js'), a.js, {
+    //   encoding: 'utf8',
+    // });
     console.log([a, b]);
   } finally {
     // The child process can be explicitly killed when it's no longer needed

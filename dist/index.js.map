@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/child.ts", "src/index.ts"],
+  "sourcesContent": ["export default function bbc(num: number): number {\n  return num + 2;\n}", "import bbc from './child';\n\nexport default async function abc(num: number): Promise<number> {\n  return 2 + num + bbc(num);\n}\n\nfunction test() {\n  console.log(abc(456));\n}\n\ntest();\n"],
+  "mappings": ";;;;;;;;;;;AAAe,aAAa;AAC1B,SAAO,MAAM;AAAA;;;ACDf;AAAA;AAAA;AAEA,mBAAkC;AAChC,SAAO,IAAI,MAAM,IAAI;AAAA;AAGvB;AACE,UAAQ,IAAI,IAAI;AAAA;AAGlB;",
+  "names": []
+}
